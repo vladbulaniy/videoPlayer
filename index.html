@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video Player</title>
+
+</head>
+<style>
+    #container{
+        width: 1000px;
+        height: 500px;
+        border: 1px solid gray;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -250px;
+        margin-left: -500px;
+    }
+    #videoConteiner{
+        /*float: left;*/
+    }
+
+    #videoConteiner video{
+        width: 900px;
+        /*height: 600px;*/
+    }
+    button{
+        height: 20px;
+    }
+
+    #videoMenu{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        z-index: 10;
+    }
+    #videoMenu ul li{
+        list-style: none;
+        font-size: 120%;
+        cursor: pointer;
+        padding: 3px;
+    }
+
+    #videoMenu ul li:hover{
+        color: darkmagenta;
+    }
+#controlButtons{
+    /*position: relative;*/
+}
+
+</style>
+<body>
+<div id="container">
+    <div id="videoConteiner">
+        <video src="video/tt.mp4" poster="video/urj77we-AdA.jpg" controls width="900px" height="500px" id="video">
+        </video>
+    </div>
+    <div id="videoMenu">
+        <ul>
+            <li data-src="video/tt.mp4">First</li>
+            <li data-src="video/322075_2.mov">Second</li>
+            <li data-src="video/444172_2.mov">Third</li>
+            <li data-src="video/456833_2.mov">Fourth</li>
+            <li data-src="video/456987_2.mov">Fifth</li>
+            <li data-src="video/457014_2.mov">Sixth</li>
+        </ul>
+    </div>
+    <div id="controlButtons">
+        <button onclick="prev()">&#9194;</button>
+        <button onclick="play()" id="play">&#9658;</button>
+        <button onclick="pause()">&#921; &#921;</button>
+        <button onclick="stop()" style="color: black">&#9209;</button>
+        <button onclick="next()" style="margin-top: 5px"> ⏩</button>
+    </div>
+
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
